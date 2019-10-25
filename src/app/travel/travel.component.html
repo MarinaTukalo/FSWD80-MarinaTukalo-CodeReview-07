@@ -1,0 +1,73 @@
+<!-- Form -->
+<div class="row mt-3">
+  <div class="col-md-5">
+    <form [formGroup]="this.travelService.form" (ngSubmit)="onSubmit()">
+      <input type="hidden" formControlName="$key">
+      <div class="form-group">
+        <h5><label>Type of travel</label></h5>
+        <input formControlName="travelType" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.travelType.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.travelType.errors">
+        	<p>This field is required<p>
+        </div>
+      </div>
+      <div class="form-group">
+        <h5><label>Country</label></h5>
+        <input formControlName="country" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.country.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.country.errors">
+        	<p>This field is required<p>
+        </div>
+      </div>
+      <div class="form-group">
+        <h5><label>City</label></h5>
+        <input formControlName="city" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.city.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.city.errors">
+        	<p>This field is required<p>
+        </div>
+      </div>
+      <div class="form-group">
+        <h5><label>Description</label></h5>
+        <input formControlName="description" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.description.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.description.errors">
+        	<p>This field is required<p>
+        </div>
+      </div>
+      <div class="form-group">
+        <h5><label>Duration in day(s)</label></h5>
+        <input formControlName="duration" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.duration.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.duration.errors">
+        	<label *ngIf="formControls.duration.errors.required">
+        		<p>This field is required<p>
+        	</label>
+        	<label *ngIf="formControls.duration.errors.minlength">
+        		<p>at least 1 day</p>
+        	</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <h5><label>Price in EUR</label></h5>
+        <input formControlName="price" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.price.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.price.errors">
+        	<p>This field is required<p>
+        </div>
+      </div>
+      <div class="form-group">
+        <h5><label>Image</label></h5>
+        <input formControlName="img" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.img.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.img.errors">
+        	<p>This field is required<p>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-outline-dark float-right" value="Add Info">
+      </div>
+      <div class="alert alert-info" *ngIf="showSuccessMessage">
+        <p>submitted successfully.</p>
+      </div>
+    </form>
+  </div>
+<!-- Travel list -->
+
+  <div class="col-md-7">
+    <app-travel-list></app-travel-list>
+  </div>
+</div>
