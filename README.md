@@ -1,6 +1,4 @@
-# TravelAgency
-
-https://marina.codefactory.live/
+# Bootcamp: Angular CodeReview-7 "Travelex"
 
 <p align="center">
   <img width="700" src="layout/main.png" name="home_page">
@@ -19,9 +17,14 @@ https://marina.codefactory.live/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.<br>
 
-The travel agency app contains static content on the landing and blogs pages. <br>
-The travel page has the list of all available trips, live-search and the form with validation and the option to add, delete and update travel information.<br>
-For this project is used firebase dabatase.<br>
+The travel agency app contains static content on the landing and blogs pages.
+
+The travel page has the list of all available trips, live-search and the form with validation and the option to add, delete and update travel information.
+
+The data is stored in the Firebase database.
+
+**// Disclaimer: The whole website is for educational purposes only //**
+
 
 ## Development server
 
